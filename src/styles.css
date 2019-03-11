@@ -1,0 +1,692 @@
+.App {
+  font-family: sans-serif;
+  text-align: center;
+}
+a {
+  text-decoration: none;
+}
+
+html {
+  scroll-behavior: smooth;
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.text-wrapper {
+  position: relative;
+  left: 0;
+  color: white;
+  padding: 0;
+  /* border: dashed; */
+  width: auto;
+  height: 1200px;
+}
+
+.text-title {
+  display: inline-block;
+  position: relative;
+  top: 400px;
+  margin: auto;
+  font-size: 80px;
+  border: solid 10px;
+  padding: 10px;
+}
+
+.text-desc {
+  position: relative;
+  top: 400px;
+  border: none;
+  font-size: 25px;
+  padding: 5px;
+  color: white;
+  z-index: 100;
+  background-color: rgba(255, 0, 0, 0.4);
+}
+.text-desc:hover {
+  background-color: gray;
+}
+/* .banner-wrapper {
+  position: absolute;
+  left: 0;
+  width: 2500px;
+  height: 1285px;
+  z-index: -100;
+} */
+/* .textright-wrapper {
+  position: relative;
+  width: 1850px;
+  color: white;
+  border: 5px solid red;
+  height: 1500px;
+}
+.textright-title {
+  position: relative;
+  top: 400px;
+  font-size: 80px;
+}
+.textright-desc {
+  position: relative;
+  top: 400px;
+  border: none;
+  font-size: 25px;
+  padding: 5px;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.5);
+} */
+
+.shade-wrapper {
+  top: 0;
+  left: 0;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  z-index: -50;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+.about-bg {
+  position: fixed;
+  left: 0;
+  z-index: -100;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+}
+
+.about-wrapper {
+  top: 105px;
+}
+.about-banner {
+  top: 100px;
+  position: absolute;
+  background-color: rgba(255, 0, 0, 0.5);
+  min-width: 100%;
+  width: auto;
+  margin: 0;
+  left: 0;
+  height: 200px;
+  overflow: hidden;
+}
+.about-banner-vid {
+  min-width: 100%;
+  width: auto;
+  left: 0;
+  position: absolute;
+  top: -500px;
+  z-index: -50;
+}
+.about-title {
+  color: white;
+  padding: 50px;
+  font-size: 50px;
+}
+.navbar-wrapper {
+  position: fixed;
+  width: 100%;
+  left: 0;
+  top: 0;
+  padding-bottom: 18px;
+  background-color: white;
+  align-content: center;
+  min-width: 800px;
+  max-width: 100%;
+  height: 104px;
+  z-index: 100;
+}
+
+.navbar {
+  align-content: center;
+  display: inline-block;
+  height: 100px;
+  width: 800px;
+  z-index: 100;
+  /* border-bottom-style: groove; */
+}
+
+.navbar::after,
+.navbar::before {
+  background-color: #d0d0d0;
+  content: "";
+  display: inline-block;
+  height: 1px;
+  bottom: 0.1em;
+  position: relative;
+  vertical-align: middle;
+  width: 10%;
+}
+
+.nav-logo {
+  width: 250px;
+  height: 100px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.nav-button {
+  color: gray;
+  font-size: 15px;
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-bottom: 16px;
+}
+
+.nav-button:hover {
+  color: red;
+  border-bottom-color: red;
+  border-bottom-style: groove;
+  /* background-color: red; */
+}
+
+/* .footer-wrapper {
+  position: absolute;
+  background-color: white;
+  min-width: 800px;
+  width: 100%;
+  bottom: auto;
+  left: 0;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  align-content: center;
+  height: 104px;
+  z-index: 50;
+}
+
+.sm-icon {
+  width: 50px;
+  padding-left: 3%;
+  padding-right: 3%;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+.sm-icon-hover {
+  width: 50px;
+  display: none;
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+a img:last-child {
+  display: none;
+}
+a:hover img:last-child {
+  display: inline-flex;
+}
+a:hover img:first-child {
+  display: none;
+} */
+
+.tools {
+  display: inline;
+  position: fixed;
+  width: 50px;
+  z-index: 100;
+  top: 50%;
+  left: 0;
+}
+.tool-button-img {
+  width: 50px;
+  background-color: red;
+  left: 0;
+  border-radius: 10px;
+  padding: 2px;
+}
+.tool-button-img:hover {
+  animation-name: slide;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes slide {
+  100% {
+    padding-left: 60px;
+  }
+}
+
+.banner-wrapper {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  z-index: -99;
+  transform: translateX(-50%) translateY(-50%);
+  background-size: cover;
+  transition: 1s opacity;
+}
+
+.sr-name {
+  position: absolute;
+  padding: 100px 100px 100px 300px;
+  top: 1700px;
+  color: gray;
+  font-size: 30px;
+}
+.sr-button1,
+.sr-button2 {
+  position: absolute;
+  top: 2400px;
+  width: 200px;
+  border: none;
+  color: white;
+  background-color: rgba(255, 0, 0, 0.7);
+  font-size: 18px;
+}
+.sr-button1 {
+  left: 700px;
+}
+.sr-button2 {
+  left: 1000px;
+}
+.platform {
+  position: absolute;
+  width: 2000px;
+  height: 500px;
+  /* border: solid 1px red; */
+  left: -50px;
+  top: 1950px;
+  opacity: 0.5;
+  z-index: 0;
+}
+
+.rotate0 {
+  position: absolute;
+  left: 850px;
+  top: 2000px;
+  width: 200px;
+  height: 200px;
+  z-index: 10;
+  opacity: 1;
+  animation-fill-mode: forwards;
+  animation-name: rotate0;
+  animation-duration: 1s;
+  /* border: solid 1px red; */
+}
+
+.rotate1 {
+  position: absolute;
+  opacity: 0.7;
+  z-index: 10;
+  left: 600px;
+  top: 1950px;
+  width: 100px;
+  height: 100px;
+  animation-fill-mode: forwards;
+  animation-name: rotate1;
+  animation-duration: 1s;
+  /* border: solid 1px red; */
+}
+.rotate2 {
+  position: absolute;
+  opacity: 0.7;
+  z-index: 10;
+  left: 1200px;
+  top: 1950px;
+  width: 100px;
+  height: 100px;
+  animation-fill-mode: forwards;
+  animation-name: rotate2;
+  animation-duration: 1s;
+  /* border: solid 1px red; */
+}
+
+@keyframes rotate0 {
+  100% {
+    transform: translate(-300px, -100px) scale(0.5, 0.5);
+    opacity: 0.7;
+  }
+}
+@keyframes rotate1 {
+  100% {
+    transform: translate(600px, 0px);
+    opacity: 0.7;
+  }
+}
+
+@keyframes rotate2 {
+  100% {
+    transform: translate(-300px, 100px) scale(2, 2);
+    opacity: 1;
+  }
+}
+
+.sr-title-wrapper {
+  position: relative;
+  width: 1850px;
+  color: gray;
+  /* border: 5px solid red; */
+  height: 1500px;
+}
+.sr-title {
+  position: relative;
+  top: 400px;
+  font-size: 80px;
+}
+
+.bio-wrapper {
+  margin-top: 50px;
+
+  display: inline-grid;
+  position: relative;
+  border-bottom-style: groove;
+  /* border:dashed; */
+  width: 1000px;
+}
+
+.portrait {
+  position: relative;
+  float: left;
+  width: 200px;
+  padding-right: 20px;
+}
+
+.button {
+  background-color: red;
+  color: white;
+  width: 100px;
+  border: 2px solid red;
+  border-radius: 5px;
+}
+
+.bios-name,
+.bios-desc {
+  position: relative;
+  min-width: 500px;
+  max-width: 1000px;
+}
+
+.contact-wrapper {
+  top: 100px;
+  width: 100%;
+  position: absolute;
+  left: 0;
+  padding: 20px;
+
+  /* border: dashed; */
+
+  display: inline-block;
+}
+.contact-form {
+  text-align: left;
+  position: relative;
+  display: inline-block;
+  min-width: 80%;
+  width: auto;
+  padding: 80px;
+  background-color: white;
+  top: 350px;
+  font-size: 18px;
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.5);
+}
+.contact-form:hover {
+  box-shadow: 0 16px 32px 0 rgba(0, 0, 0, 0.8);
+}
+
+.form-select {
+  min-width: 50%;
+  width: auto;
+  font-size: 18px;
+  height: 40px;
+  padding-left: 10px;
+}
+.form-name {
+  min-width: 80%;
+  width: auto;
+  height: 40px;
+  padding-left: 10px;
+  font-size: 18px;
+}
+
+.form-email {
+  min-width: 80%;
+  width: auto;
+  height: 40px;
+  font-size: 18px;
+  padding-left: 10px;
+}
+.form-phone {
+  min-width: 80%;
+  width: auto;
+  height: 40px;
+  font-size: 18px;
+  padding-left: 10px;
+}
+.form-msg {
+  min-width: 90%;
+  width: auto;
+  height: 200px;
+  resize: none;
+  font-size: 14px;
+  padding-left: 10px;
+}
+input {
+  margin: 10px;
+  padding: 0;
+}
+
+.products-platform {
+  position: absolute;
+  width: 2000px;
+  height: 500px;
+  /* border: solid 1px red; */
+  left: -50px;
+  top: 250px;
+  opacity: 0.5;
+  z-index: 0;
+}
+
+.products-rotate0 {
+  position: absolute;
+  left: 850px;
+  top: 300px;
+  width: 200px;
+  height: 200px;
+  z-index: 10;
+  opacity: 1;
+  animation-fill-mode: forwards;
+  animation-name: rotate0;
+  animation-duration: 1s;
+  /* border: solid 1px red; */
+}
+
+.products-rotate1 {
+  position: absolute;
+  opacity: 0.7;
+  z-index: 10;
+  left: 600px;
+  top: 250px;
+  width: 100px;
+  height: 100px;
+  animation-fill-mode: forwards;
+  animation-name: rotate1;
+  animation-duration: 1s;
+  /* border: solid 1px red; */
+}
+.products-rotate2 {
+  position: absolute;
+  opacity: 0.7;
+  z-index: 10;
+  left: 1200px;
+  top: 250px;
+  width: 100px;
+  height: 100px;
+  animation-fill-mode: forwards;
+  animation-name: rotate2;
+  animation-duration: 1s;
+  /* border: solid 1px red; */
+}
+.products-sr-name {
+  position: absolute;
+  padding: 100px 100px 100px 300px;
+  top: 50px;
+  color: gray;
+  font-size: 30px;
+}
+
+.contact-banner {
+  min-width: 100%;
+  width: auto;
+  left: 0;
+  position: absolute;
+  z-index: -99;
+}
+.contact-banner-wrapper {
+  height: 250px;
+  position: absolute;
+  left: 0;
+  min-width: 100%;
+  width: auto;
+  background-color: rgba(255, 0, 0, 0.5);
+  overflow: hidden;
+}
+.contact-banner-title {
+  color: white;
+  position: absolute;
+  font-size: 100px;
+  left: 450px;
+  top: 0px;
+}
+
+.jobs-bg {
+  position: absolute;
+  top: 300px;
+  left: 0;
+  min-height: 100%;
+  min-width: 100%;
+  width: auto;
+  height: auto;
+  z-index: -100;
+}
+
+.jobs-banner {
+  width: 1895px;
+  left: 0;
+
+  position: absolute;
+  z-index: -99;
+}
+.jobs-banner-wrapper {
+  height: 350px;
+  position: absolute;
+  left: 0;
+  width: 1895px;
+  background-color: rgba(255, 0, 0, 0.6);
+  overflow: hidden;
+}
+.jobs-banner-title {
+  color: white;
+  position: absolute;
+  font-size: 100px;
+  left: 750px;
+  top: 100px;
+}
+.jobs-wrapper {
+}
+
+.careers {
+  position: absolute;
+  top: 500px;
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.5);
+  transition: 0.3s;
+  float: left;
+  padding: 50px;
+  left: 300px;
+  width: 300px;
+  height: 250px;
+  font-size: 18px;
+  background-color: white;
+}
+
+.internships {
+  position: absolute;
+  top: 800px;
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.5);
+  transition: 0.3s;
+  left: 800px;
+  height: 250px;
+  width: 300px;
+  background-color: white;
+  padding: 50px;
+  font-size: 18px;
+}
+.meet-the-team {
+  position: absolute;
+  top: 1100px;
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.5);
+  transition: 0.3s;
+  left: 1300px;
+  height: 250px;
+  width: 300px;
+  background-color: white;
+  padding: 50px;
+  font-size: 18px;
+}
+
+.careers:hover,
+.internships:hover,
+.meet-the-team:hover {
+  box-shadow: 0 16px 32px 0 rgba(0, 0, 0, 1);
+  background-color: gray;
+  color: white;
+}
+
+.jobs-button {
+  border-color: rgba(0, 0, 0, 0.2);
+  background-color: rgba(255, 0, 0, 0.8);
+  font-size: 18px;
+  color: white;
+}
+/* .jobs-button:hober {
+  background-color: black;
+  color: white;
+} */
+.test {
+  position: relative;
+  display: grid;
+  grid-template-columns: auto auto auto;
+  size: 100px;
+  /* border: dashed; */
+  margin: auto;
+
+  width: 1800px;
+  height: 500px;
+  top: 700px;
+}
+.product-img {
+  position: relative;
+  float: left;
+  display: grid;
+  height: 200px;
+  width: 200px;
+  padding-right: 10px;
+  /* border: dashed; */
+}
+.product-wrapper {
+  text-align: left;
+  height: 300px;
+  padding: 20px;
+  width: 550px;
+  position: relative;
+  /* border: dashed; */
+}
+
+.card-wrapper {
+  padding: 10px;
+  height: 500px;
+  width: 550px;
+  margin: auto;
+  margin-bottom: 20px;
+}
+
+.bio-wrapper {
+  width: 300px;
+  padding: 20px;
+  margin: 80px;
+}
+
+.bio-wrapper:hover {
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 1);
+}
